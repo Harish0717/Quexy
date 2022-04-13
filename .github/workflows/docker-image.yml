@@ -32,8 +32,4 @@ jobs:
           tags: harish0717/dot-net:latest          
 
 
-      - uses: Harish0717/action-autotag@stable
-        with:
-          
-          tag_prefix: "v"
-          tag_suffix: " (beta)"
+ 
