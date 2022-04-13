@@ -3,16 +3,12 @@ on:
   push:
     branches:
       - 'master'
-    tags: 'v1.0.0'
+    tags: '*'
 
 jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - name: Publish Helm charts
-        uses: Harish0717/Quexy@master
-        with:
-          token: ${{ secrets.TOKEN_GITHUB }}  
       - name: Checkout
         uses: actions/checkout@v2 
       - name: Set up QEMU
@@ -32,7 +28,12 @@ jobs:
         with:
           context:  amd64/hello-world/.
           push: true 
-          tags: harish0717/dot-net:v1            
+          tags: harish0717/dot-net:v1 
+
+      - name: Publish Helm charts
+        uses: Harish0717/Quexy@master
+        with:
+          token: ${{ secrets.TOKEN_GITHUB }}  
         
   docker:
     runs-on: ubuntu-latest
