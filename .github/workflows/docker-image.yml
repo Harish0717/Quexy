@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - 'master'
-    tags: '*'
+    tags: 'chart.*'
 
 jobs:
   docker:
