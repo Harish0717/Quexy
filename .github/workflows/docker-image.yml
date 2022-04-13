@@ -2,7 +2,8 @@ name: ci
 on:
   push:
  
-    tags:
+    branches:
+      - 'master'
       - 'v1.2.3'
  
 jobs:
