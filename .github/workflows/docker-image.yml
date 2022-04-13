@@ -1,10 +1,8 @@
 name: ci
 on:
   push:
-    branches:
-      - 'master'
     tags:
-      - '*'
+      - 'v*.*.*'
  
 jobs:
   docker:
@@ -30,7 +28,7 @@ jobs:
         with:
           context:  amd64/hello-world/.
           push: true 
-          tags: harish0717/dot-net:v1            
+          tags: harish0717/dot-net:latest          
 
 
 
