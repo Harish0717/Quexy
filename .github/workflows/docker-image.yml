@@ -5,7 +5,7 @@ on:
       - '*'
  
 jobs:
-  docker:
+  docker:     
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
