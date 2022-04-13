@@ -2,10 +2,7 @@ name: ci
 on:
   push:
     tags:
-      - 'v1.1.1'
- 
-    branches:
-      - 'master'
+      - 'v*.*.*'
  
 jobs:
   docker:
