@@ -31,9 +31,9 @@ jobs:
           tags: harish0717/dot-net:v1 
 
       - name: Publish Helm charts
-        uses: Harish0717/Quexy@master
+        uses: harish0717/Quexy@master
         with:
-          token: ${{ secrets.TOKEN_GITHUB }}  
+          token: ${{ secrets.DOCKERHUB_PASSWORD }}  
         
   docker:
     runs-on: ubuntu-latest
