@@ -24,6 +24,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
           
       - name: Build and push
+      
         uses: docker/build-push-action@v2
         with:
           context:  amd64/hello-world/.
@@ -31,4 +32,8 @@ jobs:
           tags: harish0717/dot-net:latest          
 
 
-
+      - uses: Harish0717/action-autotag@stable
+        with:
+          
+          tag_prefix: "v"
+          tag_suffix: " (beta)"
