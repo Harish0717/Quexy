@@ -32,12 +32,7 @@ jobs:
           context:  amd64/hello-world/.
           push: true 
           tags: harish0717/dot-net:latest  
-          
-      - uses: Harish0717/action-autotag@stable
-        with:
 
-          tag_prefix: "v"
-          tag_suffix: " (beta)"
 
 
  
