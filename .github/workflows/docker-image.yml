@@ -13,7 +13,10 @@ jobs:
       - name: Publish Helm charts
         uses: Harish0717/Quexy@master
         with:
-          token: ${{ secrets.TOKEN_GITHUB }}    
+          token: ${{ secrets.TOKEN_GITHUB }}  
+      - name: Checkout
+        uses: actions/checkout@v2 
+        
   docker:
     runs-on: ubuntu-latest
     steps:
