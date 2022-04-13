@@ -29,8 +29,4 @@ jobs:
           context:  amd64/hello-world/.
           push: true 
           tags: harish0717/dot-net:v1            
-      - uses: Quexy/action-general-autotag@1.0.0
-          with:
-            GITHUB_TOKEN: "${{ secrets.TOKEN_GITHUB }}"
-            extraction_regex: "(\\d+\\.\\d+\\.\\d+)"
-            tag_format: "v{version} (beta)"
+
